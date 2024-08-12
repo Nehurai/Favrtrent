@@ -15,9 +15,9 @@ function Setting() {
   return (
     <>
       <div className="my-8  container mx-auto  w-[90%] min-[375px]:w-[85%] overflow-hidden  ">
-        <div className="w-full mx-auto mt-10  bg-white rounded-lg border">
-          <div className="hidden sm:block border-b border-gray-200 mb-6">
-            <nav className="-mb-px flex justify-around w-full  mx-auto ">
+        <div className="w-full mx-auto mt-10 bg-white border rounded-lg">
+          <div className="hidden mb-6 border-b border-gray-200 sm:block">
+            <nav className="flex justify-around w-full mx-auto -mb-px ">
               {tabs.map((tab) => (
                 <button
                   key={tab}
@@ -34,14 +34,14 @@ function Setting() {
             </nav>
           </div>
           {/* Dropdown for smaller screens */}
-          <div className="block sm:hidden mb-4">
+          <div className="block mb-4 sm:hidden">
             <select
               value={activeTab}
               onChange={(e) => setActiveTab(e.target.value)}
-              className="w-full border-b border-gray-300 rounded-md p-2"
+              className="w-full p-2 border-b border-gray-300 rounded-md"
             >
               {tabs.map((tab) => (
-                <option key={tab} value={tab}>
+                <option className="1  `" key={tab} value={tab}>
                   {tab}
                 </option>
               ))}
@@ -52,7 +52,7 @@ function Setting() {
               <p className="text-center text-[#005D76] text-lg font-medium">
                 Create Password
               </p>
-              <div className="flex flex-col md:flex-row md:space-x-4 my-8 gap-4">
+              <div className="flex flex-col gap-4 my-8 md:flex-row md:space-x-4">
                 <div className="flex-1">
                   <input
                     type="password"
@@ -84,7 +84,7 @@ function Setting() {
                 Notifications
               </h2>
               <div className="my-8 ">
-                <div className="flex justify-between items-center">
+                <div className="flex items-center justify-between">
                   <div className="my-4">
                     <p className="font-medium">Receive updates & Offers</p>
                     <p className="text-[#938E8E] text-sm">
@@ -95,7 +95,7 @@ function Setting() {
                     <ToggleSwitch />
                   </div>
                 </div>
-                <div className="flex justify-between items-center">
+                <div className="flex items-center justify-between">
                   <div className="my-4 mb-10">
                     <p className="font-medium">Receive updates & Offers</p>
                     <p className="text-[#938E8E] text-sm">
@@ -114,7 +114,7 @@ function Setting() {
               <p className="text-center text-[#005D76] text-lg font-medium">
                 Logout from all devices
               </p>
-              <div className="flex flex-col md:flex-row md:justify-between gap-4 my-8">
+              <div className="flex flex-col gap-4 my-8 md:flex-row md:justify-between">
                 <div className="">
                   <p>Logout from everywhere</p>
                   <p className="text-[#938E8E] text-sm">
@@ -135,7 +135,7 @@ function Setting() {
               <p className="text-center text-[#005D76] text-lg font-medium">
                 Delete your account
               </p>
-              <div className="flex flex-col md:flex-row md:justify-between gap-4 my-8">
+              <div className="flex flex-col gap-4 my-8 md:flex-row md:justify-between">
                 <div className="">
                   <p>Delete account</p>
                   <p className="text-[#938E8E] text-sm">
@@ -156,7 +156,7 @@ function Setting() {
               <p className="text-center text-[#005D76] text-lg font-medium">
                 Chat safety tips
               </p>
-              <div className="flex flex-row justify-between md:space-x-4 my-8">
+              <div className="flex flex-row justify-between my-8 md:space-x-4">
                 <div className="">
                   <p>Safety tips</p>
                   <p className="text-[#938E8E] text-sm">

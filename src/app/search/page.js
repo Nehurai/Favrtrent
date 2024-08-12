@@ -48,17 +48,17 @@ export default function SearchPage() {
           <span>Home</span>{" "}
           <span>
             <FaChevronRight className="inline-block text-xs text-[#606060]" />{" "}
-            <FaChevronRight className="inline-block text-xs  -ml-3 " />{" "}
+            <FaChevronRight className="inline-block -ml-3 text-xs " />{" "}
           </span>{" "}
           <span className="text-customBlue">Dress</span>
         </div>
       </div>
       <div className="w-[85%] mx-auto  mb-16">
-        <div className="flex gap-12 min-h-screen  ">
+        <div className="flex min-h-screen gap-12 ">
           {/* Sidebar */}
-          <aside className="w-[235px]  bg-white rounded">
+          <aside className="w-[235px] hidden sm:block  bg-white rounded">
             <div>
-              <h2 className="text-xl font-medium mb-4 text-customBlue">
+              <h2 className="mb-4 text-xl font-medium text-customBlue">
                 Dress Categories
               </h2>
               <ul className="text-[#606060]">
@@ -139,12 +139,12 @@ export default function SearchPage() {
               </ul>
             </div>
             <div className="my-8">
-              <h2 className="text-xl font-medium mb-4 text-customBlue">
+              <h2 className="mb-4 text-xl font-medium text-customBlue">
                 Filter by price
               </h2>
               <div className="flex justify-between">
                 <span className="text-[#606060]">Price: $0 — ${price}</span>{" "}
-                <span className="text-customBlue font-bold">Filter</span>{" "}
+                <span className="font-bold text-customBlue">Filter</span>{" "}
               </div>
               <input
                 type="range"
@@ -156,7 +156,7 @@ export default function SearchPage() {
               />
             </div>
             <div>
-              <h2 className="text-xl font-medium mb-2 text-customBlue">
+              <h2 className="mb-2 text-xl font-medium text-customBlue">
                 Product Status
               </h2>
               <ul className="text-[#606060]">
@@ -187,7 +187,7 @@ export default function SearchPage() {
 
           {/* Main Content */}
           <main className="flex-1">
-            <div className="bg-white shadow-md rounded overflow-hidden">
+            <div className="overflow-hidden bg-white rounded shadow-md">
               <Image
                 src="/Images/Rectangle 141725.png"
                 alt="Dress Image"
@@ -200,14 +200,14 @@ export default function SearchPage() {
             <div className=" text-left mt-4 bg-[#005D760D] h-20 flex items-center">
               <button
                 type="button"
-                className="inline-flex justify-center rounded-md  px-4 py-2  text-sm font-medium text-customBlue hover:bg-gray-50 "
+                className="inline-flex justify-center px-4 py-2 text-sm font-medium rounded-md text-customBlue hover:bg-gray-50 "
                 id="options-menu"
                 aria-expanded="true"
                 aria-haspopup="true"
               >
                 Sort by latest
                 <svg
-                  className="-mr-1 ml-2 h-5 w-5"
+                  className="w-5 h-5 ml-2 -mr-1"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
                   fill="currentColor"
@@ -222,17 +222,17 @@ export default function SearchPage() {
               </button>
             </div>
             {/* </div> */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4 mt-10 ">
+            <div className="grid grid-cols-2 gap-6 mt-10 lg:grid-cols-3 xl:grid-cols-4 lg:gap-4 ">
               {items.map((item) => (
                 <ItemCard key={item.id} item={item} />
               ))}
-            </div>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4 mt-10 ">
+            {/* </div> */}
+            {/* <div className="grid grid-cols-2 gap-6 mt-10 lg:grid-cols-4 lg:gap-4 "> */}
               {items.map((item) => (
                 <ItemCard key={item.id} item={item} />
               ))}
-            </div>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4 mt-10 ">
+            {/* </div> */}
+            {/* <div className="grid grid-cols-2 gap-6 mt-10 lg:grid-cols-4 lg:gap-4 "> */}
               {items.map((item) => (
                 <ItemCard key={item.id} item={item} />
               ))}

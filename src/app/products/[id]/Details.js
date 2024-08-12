@@ -4,7 +4,7 @@ import close from "../../../../public/Images/x.png";
 export default function Details() {
   return (
     <div className="my-12 ">
-      <div className="flex flex-col md:flex-row gap-4">
+      <div className="flex flex-col gap-4 md:flex-row">
         {/* Description Section */}
         <div className="md:w-2/3 bg-white max-[375px]:p-4 p-6 rounded-lg border-2">
           <div className="flex max-[375px]:gap-10 gap-24 max-[375px]:pl-2 pl-6 pb-3 border-b-2">
@@ -108,15 +108,15 @@ export default function Details() {
         </div>
 
         {/* Map and Ad Section */}
-        <div className="md:w-1/3 flex flex-col ">
-          <div className="bg-white p-2 rounded-lg border mb-4">
+        <div className="flex flex-col md:w-1/3 ">
+          <div className="p-2 mb-4 bg-white border rounded-lg">
             <img
-              src="https://s3-alpha-sig.figma.com/img/3138/381e/c43da0192d012c3f915d0c9deb15f457?Expires=1721606400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Ar5~m42qKP8J0DQCAp5iEMMHD4CBCB9sgpk2fXpQ0rQLHC9zAAQ6f3Dkh1TQ66DZszRp~uG~QtKA717e-tnAHkXQIvaHVPKJom56ZlI4t568gjMMCdXiGRGIIIHuYDmm~HKQ0ZKIsocvHjSodqh22Uh6Y5~Hkkf95gQik4hXJIV6CyQam7WGponJKhgVfsprltMXodAsYH0Izq0M9K2oOA1HA3U9a5e9r~cZVWZv58IzUipXpGFC~IJNzHvXUhYRE3t0fxG7He4n7ih2bCeUxIJKMhQw5EYE0rjw1kuyc3BhBcTpI7GhVueodxW9UJ-lnZGaKVDsi4m7VDGcxKMuQQ__"
+              src="/images/map.svg"
               alt="Map"
-              className="w-full h-auto rounded-md border"
+              className="w-full h-auto border rounded-md"
             />
           </div>
-          <div className="bg-white  rounded-lg border-2 flex justify-between py-4 px-4 mb-2">
+          <div className="flex justify-between px-4 py-4 mb-2 bg-white border-2 rounded-lg">
             <p className="text-[#005D76] text-xs font-medium">
               AD ID 1769320054
             </p>
@@ -124,10 +124,10 @@ export default function Details() {
               REPORT THIS AD
             </p>
           </div>
-          <div className="bg-white  rounded-lg border-2">
-            <Image src={close} className=" float-right mt-2 mr-2" />
+          <div className="bg-white border-2 rounded-lg">
+            <Image src={close} className="float-right mt-2 mr-2 " />
             <img
-              src="https://s3-alpha-sig.figma.com/img/3c39/9fea/8f7e0d0c2987675d70d7649efca593ce?Expires=1721606400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=TITwcotC5qZDSSoX2dEaSu5CiskZ2Fa~S5AG6HrUQQVaXkfrwscsgVB6qHI7MS2pyPY-WnrNnWTRpuX~0ej1tRw8Us2bNocw4Wxz8UOvO2vWZFEebLl6Z5fXMoFucIub3T3c29uEwtx20yUiQfYVuBS5-F4srwkcZuKAaVAQJIdeCFZRar8kG3lS5p8g5aQcr~4WgfDEGbr3RgO7nDXme8RJ7LpRh4Hmwl~pWZtAPc09mGmF0k9poQaonpAczmcve7N4a9uYEX5fsX~tUf1l9dQL9FcAyrvtR7Z4kQImTvwLCcMoS2ZWkGywX5MQZi~Sj9arRO8giuJWSyatQv19uw__"
+              src="/images/rent.svg"
               alt="For Rent"
               className="w-full h-[240px] object-cover relative"
             />

@@ -52,24 +52,25 @@ const items = [
 
 export default function Second() {
   return (
-    <div className="w-[90%] sm:w-[85%] mx-auto mt-20">
+    <div className="w-[90%] sm:w-[85%] mx-auto  relative mt-2">
       <>
         <Head>
           <title>Rental Items</title>
         </Head>
-        <main className="flex w-full flex-col lg:flex-row gap-8">
-          <div className="w-[592px]">
-            <FeaturedItem />
+        <main className="flex flex-col w-full h-full gap-8 lg:flex-row">
+        {/* lg:w-[592px] */}
+          <div className="lg:w-[35vw]  2xl:w-[45vw] w-full object-cover">
+            <FeaturedItem  />
           </div>
-          <div className="flex-1  flex flex-col justify-center">
-            <h2 className="text-2xl sm:text-lg lg:text-xl font-bold font-poppins mb-4 text-center lg:text-left">
+          <div className="flex flex-col ">
+            <h2 className="mb-4 text-2xl font-bold text-center sm:text-lg lg:text-xl font-poppins lg:text-left">
               Hot items are on rent for you
             </h2>
-            <div className="flex justify-center items-center">
-              <div className="border-b-4 border-customBlue border-dashed mb-4 w-full max-w-3xl"></div>
+            <div className="flex items-center justify-center">
+              <div className="w-full max-w-3xl mb-4 border-b-4 border-dashed border-customBlue"></div>
             </div>
-            <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-3 ">
-              {items.map((item) => (
+            <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-3 lg:gap-3 ">
+              {items.slice(0,6).map((item) => (
                 <ItemCard key={item.id} item={item} />
               ))}
             </div>

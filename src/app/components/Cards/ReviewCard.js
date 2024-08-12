@@ -1,49 +1,54 @@
+import Image from "next/image";
 import React from "react";
 import { MdOutlineStarBorder } from "react-icons/md";
 
 const ReviewCard = () => {
   return (
-    <div className="flex flex-col items-center  lg:flex-row lg:justify-center gap-10 border-2  font-poppins rounded-lg h-[340px] p-3">
-      <img
+    <div className="flex flex-row items-center h-full gap-10 p-2 border-2 rounded-lg lg:justify-center font-poppins">
+      <div className="sm:w-[50vw] w-full">
+      <Image
+        width={200}
+        height={200}
         src="/images/Rectangle12.png"
         alt="iPhone 14 Pro Max with Apple M1 chip"
-        className="w-[350px] h-[320px]  rounded-t-lg shadow-md lg:shadow-none"
+        className="w-full rounded-t-lg shadow-md lg:shadow-none"
       />
-      <div className="  text-balance lg:text-base text-xs">
-        <h2 className="text-2xl font-bold">
+        </div> 
+      <div className="text-xs text-balance lg:text-xl">
+        <div className="lg:text-[20px] text-[10px] sm:text-[14px] font-semibold">
           2021 Apple iPad Pro with Apple M1 chip (12.9-inch/32.77 cm, Wi-Fi,
           128GB)
-        </h2>
-        <p className="text-gray-600 text-base mt-4">
+        </div>
+        <p className="sm:mt-4 mt-2 text-[8px] sm:text-base text-gray-600">
           You can rent it at the best price
         </p>
-        <p className="lg:text-2xl text-xs font-semibold mt-0">₹9,900.00 / mo</p>
-        <div className="lg:flex lg:flex-row flex-col hidden lg:items-center  lg:mt-2">
-          <div className="flex gap-2  ">
+        <p className="mt-0 text-xs font-semibold lg:text-2xl">₹9,900.00 / mo</p>
+        <div className="flex-col hidden lg:flex lg:flex-row lg:items-center lg:mt-2">
+          <div className="flex gap-1 ">
             <img
               src="/images/star.png"
               alt=""
-              className="w-7 h-7 object-cover"
+              className="object-cover w-7 h-7"
             />
             <img
               src="/images/star.png"
               alt=""
-              className="w-7 h-7 object-cover"
+              className="object-cover w-7 h-7"
             />
             <img
               src="/images/star.png"
               alt=""
-              className="w-7 h-7 object-cover"
+              className="object-cover w-7 h-7"
             />
             <img
               src="/images/star.png"
               alt=""
-              className="w-7 h-7 object-cover"
+              className="object-cover w-7 h-7"
             />
             <img
               src="/images/star.png"
               alt=""
-              className="w-7 h-7 object-cover"
+              className="object-cover w-7 h-7"
             />
             {/* <svg className="w-5 h-5 " fill="currentColor" viewBox="0 0 20 20">
               <path

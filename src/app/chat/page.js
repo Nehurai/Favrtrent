@@ -80,8 +80,8 @@ const ChatPage = () => {
 
   const groupedMessages = groupMessagesByDate(messages);
   let imgs =
-    "https://s3-alpha-sig.figma.com/img/dc1c/815a/f35adaa4f9acfce65a733834b2f851f0?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=PpevNOlWvrLvbSVyK4hpaj04q0VTtmUCDYo5J53~RvvnFRnSZ1oQ4FYf2v-dtTgao4Yud49nxZDpreHfGcIrQ3WpxUFnlDmmTgEmQIdbe3OOzAtCEp8mTCbXLh~DpFlJXiaKxHsjzw4QL6bAvxki-J-sDPGBzGd0ulxWFov5FQijg3udqXnga3kedgMCjZ4nFvJ4KWe0HUfLqa7eFfjZ0PENZXeF~IA89K~s40ZZTabzXLKSvgvufb91Fyb8wF5grwmYbkQ8ov5~W7Ivt-uZ6LPLZ0Feqq--FeWPKWZW9XOfyn9C4VPgnYPniFMVUaYMonbohrzYrBn7gGiFZwXb6A__";
-
+    // "https://s3-alpha-sig.figma.com/img/dc1c/815a/f35adaa4f9acfce65a733834b2f851f0?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=PpevNOlWvrLvbSVyK4hpaj04q0VTtmUCDYo5J53~RvvnFRnSZ1oQ4FYf2v-dtTgao4Yud49nxZDpreHfGcIrQ3WpxUFnlDmmTgEmQIdbe3OOzAtCEp8mTCbXLh~DpFlJXiaKxHsjzw4QL6bAvxki-J-sDPGBzGd0ulxWFov5FQijg3udqXnga3kedgMCjZ4nFvJ4KWe0HUfLqa7eFfjZ0PENZXeF~IA89K~s40ZZTabzXLKSvgvufb91Fyb8wF5grwmYbkQ8ov5~W7Ivt-uZ6LPLZ0Feqq--FeWPKWZW9XOfyn9C4VPgnYPniFMVUaYMonbohrzYrBn7gGiFZwXb6A__";
+    "/images/men.svg"
   return (
     <div className="mt-8 border flex h-[90vh] flex-col md:flex-row w-[90%] mx-auto">
       {/* User Section */}
@@ -97,7 +97,7 @@ const ChatPage = () => {
           </section>
         </div>
 
-        <div className="flex space-x-2 my-4 mx-4 overflow-auto">
+        <div className="flex mx-4 my-4 space-x-2 overflow-auto">
           <button className="px-4 py-2 bg-[#005D76] text-white rounded-md">
             All
           </button>
@@ -121,9 +121,9 @@ const ChatPage = () => {
               <img
                 src={imgs} // Replace with actual profile picture
                 alt="User Picture"
-                className="rounded-full object-cover w-12 h-12"
+                className="object-cover w-12 h-12 rounded-full"
               />
-              <div className="ml-4 w-4/5 ">
+              <div className="w-4/5 ml-4 ">
                 <div className="flex justify-between gap-4">
                   <p className="font-semibold truncate" title="Abhinav Dabas">
                     Abhinav Dabas
@@ -132,7 +132,7 @@ const ChatPage = () => {
                 </div>
 
                 <div className="flex items-center justify-between">
-                  <p className="text-gray-600 mr-4 truncate">Hi</p>
+                  <p className="mr-4 text-gray-600 truncate">Hi</p>
                   <Menu as="div" className="relative -mt-4 ">
                     <Menu.Button className="focus:outline-none">
                       <svg
@@ -150,7 +150,7 @@ const ChatPage = () => {
                         />
                       </svg>
                     </Menu.Button>
-                    <Menu.Items className="absolute  right-0 w-52 mt-2 px-4 bg-white border border-gray-200 rounded-md shadow-lg">
+                    <Menu.Items className="absolute right-0 px-4 mt-2 bg-white border border-gray-200 rounded-md shadow-lg w-52">
                       <Menu.Item>
                         {({ active }) => (
                           <button
@@ -216,7 +216,7 @@ const ChatPage = () => {
             />
             <div className="ml-4 w-[150px]">
               <h3 className="text-lg font-semibold truncate ">Abhinav Dabas</h3>
-              <p className="text-xs lg:text-sm text-gray-600 truncate">
+              <p className="text-xs text-gray-600 truncate lg:text-sm">
                 Last seen 5 minutes ago
               </p>
             </div>
@@ -233,7 +233,7 @@ const ChatPage = () => {
               className="hidden min-[375px]:block w-6 h-6"
             />
 
-            <Menu as="div" className="relative  ">
+            <Menu as="div" className="relative ">
               <Menu.Button className="focus:outline-none">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -250,7 +250,7 @@ const ChatPage = () => {
                   />
                 </svg>
               </Menu.Button>
-              <Menu.Items className="absolute right-0 w-52 mt-2 px-4 bg-white border border-gray-200 rounded-md shadow-lg">
+              <Menu.Items className="absolute right-0 px-4 mt-2 bg-white border border-gray-200 rounded-md shadow-lg w-52">
                 <Menu.Item>
                   {({ active }) => (
                     <button
@@ -351,7 +351,7 @@ const ChatPage = () => {
         <div className="flex-1 p-4 overflow-y-auto h-[68%] md:h-[64%] xl:h-[68%] small:h-[58%] h1:h-[60%]  h2:h-[65%]  h3:h-[68%]  h4:h-[70%]  h5:h-[74%]  h6:h-[76%]  h7:h-[78%] tall:h-[80%] bg-[#F5F9FA]">
           {Object.keys(groupedMessages).map((date) => (
             <div key={date}>
-              <div className="text-center text-sm text-gray-600 mb-4">
+              <div className="mb-4 text-sm text-center text-gray-600">
                 {formatDate(new Date(date))}
               </div>
               {groupedMessages[date].map((message) => (
@@ -370,7 +370,7 @@ const ChatPage = () => {
                   >
                     <p>{message.text}</p>
                   </div>
-                  <p className="text-xs text-gray-500 mt-1">
+                  <p className="mt-1 text-xs text-gray-500">
                     {format(message.timestamp, "h:mm a")}
                   </p>
                 </div>
@@ -384,7 +384,7 @@ const ChatPage = () => {
             alt="link"
             width={30}
             height={20}
-            className=" object-contain"
+            className="object-contain "
           />
           <input
             type="text"
@@ -410,7 +410,7 @@ const ChatPage = () => {
             alt="mic"
             width={30}
             height={20}
-            className=" object-contain"
+            className="object-contain "
           />
         </div>
       </div>

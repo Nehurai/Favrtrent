@@ -35,12 +35,12 @@ function LoggedInNavbar({ toggleNotifications }) {
         <Menu as="div" className="relative inline-block text-left">
           <div>
             <Menu.Button className="flex items-center text-lg font-bold cursor-pointer">
-              <IoIosNotificationsOutline className="text-lg font-bold cursor-pointer mt-2" />
+              <IoIosNotificationsOutline className="mt-2 text-lg font-bold cursor-pointer" />
             </Menu.Button>
           </div>
 
-          <Menu.Items className="absolute left-0 mt-2 w-[350px]  bg-white shadow-lg rounded-lg p-3 z-20 h-[300px] ">
-            <div className="p-4 pb-7 border-b border-gray-200 flex justify-between">
+          <Menu.Items className="absolute  right-0 mt-2 w-[350px]  bg-white shadow-lg rounded-lg p-3 z-20 h-[300px] ">
+            <div className="flex justify-between p-4 border-b border-gray-200 pb-7">
               <h3 className="text-xl font-medium">Notifications</h3>
               <button className="text-[#1C1C1E80] text-xs">
                 Mark all as read
@@ -50,20 +50,20 @@ function LoggedInNavbar({ toggleNotifications }) {
               {/* <div className="flex justify-center my-4">
                 <img
                   src="/images/notification.png"
-                  className="w-32 h-28 object-contain"
+                  className="object-contain w-32 h-28"
                   alt=""
                 />
               </div>
-              <p className="text-center font-medium">No Notification yet</p> */}
+              <p className="font-medium text-center">No Notification yet</p> */}
 
               <div className="flex items-center mb-4">
                 <img
                   src="https://s3-alpha-sig.figma.com/img/0032/2573/83698f9a5030dead064afa3b60692d9d?Expires=1721001600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=jztn5pOOw3eGpUhnlw6NCjfQWSA1COH8F2jaIIjGgSLRH-lbi6cZJpbw-0ZFF5R9UgUzd0eC3MSbAdooZ8PBAuTS36m5ZgXEHYlend6JZIyWgNxW3k2CYqn1Rrnn3ZPM3OSKOkZ95X05-BcsgeR~HazHtkEftRaS6GeB0YKW4o~RGwADO5wsUJQhmNThW8EiPronhpdBlO8B8aKjr7Ar-gc4hq5B1w0KDNJcolZitOPbCmPWbazy4CKCaV~d4Kw7IaukP56HAXWGWZGkbqcEBuTFlBuz1N2r1wjigaVERSS~6F0DhQ6iX90ylqMS~qV91DYn7fEN~FqNe4WMMFlPKg__"
                   alt="profile"
-                  className="h-8 w-8 rounded-full mr-4 object-cover"
+                  className="object-cover w-8 h-8 mr-4 rounded-full"
                 />
                 <div className="flex flex-col">
-                  <section className="font-semibold flex justify-between">
+                  <section className="flex justify-between font-semibold">
                     <p className="text-base"> Rohan Sharma</p>
                     <p className="text-[10px] text-[#1C1C1E80]">Today</p>
                   </section>
@@ -78,10 +78,10 @@ function LoggedInNavbar({ toggleNotifications }) {
                 <img
                   src="https://s3-alpha-sig.figma.com/img/0032/2573/83698f9a5030dead064afa3b60692d9d?Expires=1721001600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=jztn5pOOw3eGpUhnlw6NCjfQWSA1COH8F2jaIIjGgSLRH-lbi6cZJpbw-0ZFF5R9UgUzd0eC3MSbAdooZ8PBAuTS36m5ZgXEHYlend6JZIyWgNxW3k2CYqn1Rrnn3ZPM3OSKOkZ95X05-BcsgeR~HazHtkEftRaS6GeB0YKW4o~RGwADO5wsUJQhmNThW8EiPronhpdBlO8B8aKjr7Ar-gc4hq5B1w0KDNJcolZitOPbCmPWbazy4CKCaV~d4Kw7IaukP56HAXWGWZGkbqcEBuTFlBuz1N2r1wjigaVERSS~6F0DhQ6iX90ylqMS~qV91DYn7fEN~FqNe4WMMFlPKg__"
                   alt="profile"
-                  className="h-8 w-8 rounded-full mr-4 object-cover"
+                  className="object-cover w-8 h-8 mr-4 rounded-full"
                 />
                 <div className="flex flex-col">
-                  <section className="font-semibold flex justify-between">
+                  <section className="flex justify-between font-semibold">
                     <p className="text-base"> Rohan Sharma</p>
                     <p className="text-[10px] text-[#1C1C1E80]">Yesterday</p>
                   </section>
@@ -104,45 +104,55 @@ function LoggedInNavbar({ toggleNotifications }) {
       <div className="flex">
         <div className="flex items-center ">
           <img
-            src="https://s3-alpha-sig.figma.com/img/0032/2573/83698f9a5030dead064afa3b60692d9d?Expires=1721001600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=jztn5pOOw3eGpUhnlw6NCjfQWSA1COH8F2jaIIjGgSLRH-lbi6cZJpbw-0ZFF5R9UgUzd0eC3MSbAdooZ8PBAuTS36m5ZgXEHYlend6JZIyWgNxW3k2CYqn1Rrnn3ZPM3OSKOkZ95X05-BcsgeR~HazHtkEftRaS6GeB0YKW4o~RGwADO5wsUJQhmNThW8EiPronhpdBlO8B8aKjr7Ar-gc4hq5B1w0KDNJcolZitOPbCmPWbazy4CKCaV~d4Kw7IaukP56HAXWGWZGkbqcEBuTFlBuz1N2r1wjigaVERSS~6F0DhQ6iX90ylqMS~qV91DYn7fEN~FqNe4WMMFlPKg__"
+            src="/images/men.svg"
             alt="profile"
             className="h-[34px] w-[34px] object-cover  rounded-full"
           />
           {/* <div className="relative"> */}
           {/* <IoMdArrowDropdown /> */}
-          <div className="relative">
+          <div className="relative ">
             <Menu as="div" className="relative inline-block text-left">
               <div>
                 <Menu.Button className="flex items-center text-lg font-bold cursor-pointer">
                   <IoMdArrowDropdown className="mt-2" />
-                  {/* <IoIosNotificationsOutline className="text-lg font-bold cursor-pointer mt-2" /> */}
+                  {/* <IoIosNotificationsOutline className="mt-2 text-lg font-bold cursor-pointer" /> */}
                 </Menu.Button>
               </div>
 
-              <Menu.Items className="absolute left-0 mt-2 w-[280px]  bg-white shadow-lg rounded-lg p-3 z-20">
-                {/* <div className="p-4 pb-7  border-gray-200 flex justify-between"></div> */}
-                <div className="flex gap-4 items-center my-3">
+              <Menu.Items sy={{ zIndex: 1300 }} className="absolute  z-20 right-0 top-4 mt-2 w-[280px]   bg-green-400 shadow-lg rounded-lg p-3 ">
+                {/* <div className="flex justify-between p-4 border-gray-200 pb-7"></div> */}
+                <div className="flex items-center gap-4 my-3">
                   <img
-                    src="https://s3-alpha-sig.figma.com/img/0032/2573/83698f9a5030dead064afa3b60692d9d?Expires=1721001600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=jztn5pOOw3eGpUhnlw6NCjfQWSA1COH8F2jaIIjGgSLRH-lbi6cZJpbw-0ZFF5R9UgUzd0eC3MSbAdooZ8PBAuTS36m5ZgXEHYlend6JZIyWgNxW3k2CYqn1Rrnn3ZPM3OSKOkZ95X05-BcsgeR~HazHtkEftRaS6GeB0YKW4o~RGwADO5wsUJQhmNThW8EiPronhpdBlO8B8aKjr7Ar-gc4hq5B1w0KDNJcolZitOPbCmPWbazy4CKCaV~d4Kw7IaukP56HAXWGWZGkbqcEBuTFlBuz1N2r1wjigaVERSS~6F0DhQ6iX90ylqMS~qV91DYn7fEN~FqNe4WMMFlPKg__"
+                    src="/images/men.svg"
                     alt="profile"
                     className="h-[50px] w-[50px] object-cover  rounded-full"
                   />
                   <span className="text-[#1C1C1E] text-xl">Natasha Dabas</span>
                   <FaChevronRight color="#005D76" className="ml-2" />
                 </div>
-                <div className="p-2">
+                <div className="z-20 p-2 ">
                   <hr />
-                  <div className="flex items-center my-2 gap-4 px-2">
+                  <div className="flex items-center gap-4 px-2 my-2">
                     <FaRegQuestionCircle className="" color="#005D76" />{" "}
                     <p>Help</p>
                   </div>
                   <hr />
-                  <div className="flex items-center my-2 gap-4 px-2">
+                  <div className="flex items-center gap-4 px-2 my-2">
                     <FiSettings className="" color="#005D76" fontWeight="700" />{" "}
                     <p>Settings</p>
                   </div>
                   <hr />
-                  <div className="flex items-center my-2 gap-4 px-2">
+                  <div className="flex items-center gap-4 px-2 my-2">
+                    <FiSettings className="" color="#005D76" fontWeight="700" />{" "}
+                    <p>Take on Rent</p>
+                  </div>
+                  <hr />
+                  <div className="flex items-center gap-4 px-2 my-2">
+                    <FiSettings className="" color="#005D76" fontWeight="700" />{" "}
+                    <p>Put on Rent</p>
+                  </div>
+                  <hr />
+                  <div className="flex items-center gap-4 px-2 my-2">
                     <IoMdLogOut
                       className="transform scale-x-[-1]"
                       color="#005D76"
@@ -155,10 +165,10 @@ function LoggedInNavbar({ toggleNotifications }) {
           </div>
           {/* </div> */}
         </div>
-        <button className="px-4 py-3 bg-customBlue text-white rounded-lg ml-2">
+        {/* <button className="hidden px-4 py-2 ml-2 text-white rounded-lg lg:block bg-customBlue">
           Take on Rent
-        </button>
-        <button className="px-4 py-3 text-customBlue border border-customBlue rounded-lg ml-3">
+        </button> */}
+        <button className="hidden px-4 py-2 ml-3 border rounded-lg lg:block text-customBlue border-customBlue">
           <Link href="/put-on-screen/choose-category">Put on Rent</Link>
         </button>
       </div>

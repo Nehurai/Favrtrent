@@ -42,11 +42,11 @@ function page() {
   ];
   return (
     <>
-      <div className="pb-4 mb-24 -mt-4 container mx-auto  w-[90%] min-[375px]:w-[85%] overflow-hidden  ">
-        <div className="w-full mx-auto mt-10  bg-white rounded-lg">
+      <div className="pb-4 mb-24 md:-mt-8 -mt-4 container mx-auto w-[95vw] sm:w-[90%] sm:min-[375px]:w-[85%] overflow-hidden  ">
+        <div className="w-full mx-auto mt-10 bg-white rounded-lg">
           {/* <EmptyState /> */}
-          <div className="border-b border-gray-200 mb-6">
-            <nav className="-mb-px flex gap-24 w-full ml-8">
+          <div className="mb-6 border-b border-gray-200">
+            <nav className="flex w-full gap-24 ml-8 -mb-px ">
               {tabs.map((tab) => (
                 <button
                   key={tab}
@@ -63,10 +63,10 @@ function page() {
             </nav>
           </div>
           {activeTab === "My Posts" && (
-            <div className=" mx-auto">
+            <div className="mx-auto ">
               <section className="w-full">
-                <div className="flex-1 mr-0  flex-col flex justify-center">
-                  <div className="flex justify-between">
+                <div className="flex flex-col justify-center flex-1 mr-0">
+                  <div className="flex overflow-x-auto md:justify-between">
                     {likeItem.map((item) => (
                       <ItemCard key={item.id} item={item} />
                     ))}
@@ -81,7 +81,7 @@ function page() {
                 Notifications
               </h2>
               <div className="my-8 ">
-                <div className="flex justify-between items-center">
+                <div className="flex items-center justify-between">
                   <div className="my-4">
                     <p className="font-medium">Receive updates & Offers</p>
                     <p className="text-[#938E8E] text-sm">
@@ -90,7 +90,7 @@ function page() {
                   </div>
                   <div></div>
                 </div>
-                <div className="flex justify-between items-center">
+                <div className="flex items-center justify-between">
                   <div className="my-4 mb-10">
                     <p className="font-medium">Receive updates & Offers</p>
                     <p className="text-[#938E8E] text-sm">

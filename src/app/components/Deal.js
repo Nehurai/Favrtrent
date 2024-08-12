@@ -60,7 +60,7 @@ function Deal() {
     // dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 5,
+    slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
@@ -133,7 +133,7 @@ function Deal() {
 
   return (
     <div>
-      <div className="w-full mt-10 h-auto ">
+      <div className="w-full h-auto mt-10 ">
         {/* <section className="sm:col-auto"> */}
         {/* <div className="w-full  h-auto sm:h-[628px]"> */}
         <img src="/images/deal.png" className="" />
@@ -142,15 +142,15 @@ function Deal() {
       {/* </section> */}
 
       <section className="mt-12">
-        <div className="flex-1 mr-0  flex-col flex justify-center">
+        <div className="flex flex-col justify-center flex-1 mr-0">
           <div className="flex justify-between items-center border-dashed border-b-2 py-2  pt-2.5 pl-5 border-customBlue">
-            <h2 className="text-2xl font-semibold font-poppins  text-center lg:text-left">
+            <h2 className="text-2xl font-semibold text-center font-poppins lg:text-left">
               Today's Hot Deals
             </h2>
-            <p className="text-customBlue text-lg font-semibold">View All</p>
+            <p className="text-lg font-semibold text-customBlue">View All</p>
           </div>
-          {/* <div className="grid grid-cols-2 lg:grid-cols-5 gap-6 my-8"> */}
-          <div className="my-8">
+          {/* <div className="grid grid-cols-2 gap-6 my-8 lg:grid-cols-5"> */}
+          <div className="px-4 my-4 md:my-8 sm:px-0">
             <Slider {...settings}>
               {hotItemDeal.map((item) => (
                 <ItemCard key={item.id} item={item} />
@@ -162,15 +162,15 @@ function Deal() {
       </section>
 
       <section className="mt-12">
-        <div className="flex-1 mr-0  flex-col flex justify-center">
+        <div className="flex flex-col justify-center flex-1 mr-0">
           <div className="flex justify-between items-center border-dashed border-b-2 py-2  pt-2.5 pl-5 border-customBlue">
-            <h2 className="text-2xl font-semibold font-poppins  text-center lg:text-left">
+            <h2 className="text-2xl font-semibold text-center font-poppins lg:text-left">
               Your searched items
             </h2>
-            <p className="text-customBlue text-lg font-semibold">View All</p>
+            <p className="text-lg font-semibold text-customBlue">View All</p>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-6 gap-4  my-8">
+          <div className="grid grid-cols-2 gap-4 my-8 md:grid-cols-4 2xl:grid-cols-6">
             {searchedItem.map((item) => (
               <SearchCard key={item.id} item={item} />
             ))}
@@ -179,51 +179,51 @@ function Deal() {
       </section>
 
       {/* <section>
-        <div className="relative w-full mt-14 flex justify-center">
+        <div className="relative flex justify-center w-full mt-14">
           <img
             src="/images/Rectangle 3.png"
-            className="absolute w-full  h-auto  "
+            className="absolute w-full h-auto "
           />
-          <p className="absolute lg:mt-40 text-customGold font-bold text-3xl mt-60 font-poppins">
+          <p className="absolute text-3xl font-bold lg:mt-40 text-customGold mt-60 font-poppins">
             20% special offer
           </p>
           
-          <p className="absolute top-7  font-qwigley lg:mt-40 text-customGold font-bold text-3xl mt-60">
+          <p className="absolute text-3xl font-bold top-7 font-qwigley lg:mt-40 text-customGold mt-60">
             Jewellery
           </p>
         
         </div>
-        <div className="relative w-full mt-72 flex gap-x-6 justify-center font-poppins">
+        <div className="relative flex justify-center w-full mt-72 gap-x-6 font-poppins">
           <p className="text-customGold">check it out</p>
         </div>
       </section> */}
 
-      <div className="w-full mt-10  relative">
+      <div className="relative w-full mt-10">
         {/* <section className="sm:col-auto"> */}
         {/* <div className="w-full  h-auto sm:h-[628px]"> */}
-        <img src="/images/Rectangle 3.png" className=" object-cover relative" />
-        <p className="absolute font-poppins text-[#A29781] text-3xl font-bold top-[8%] right-[25%] ">
+        <img src="/images/Rectangle 3.png" className="relative object-cover " />
+        <p className="absolute font-poppins text-[#A29781] md:text-3xl text-xl font-bold top-[2%] md:top-[8%] right-[45%] ">
           Special offer on
         </p>
 
-        <p className="absolute font-qwigley text-[#A29781] text-[200px] top-[10%] right-[31%]">
+        <p className="absolute font-qwigley right-20 mb-2 text-[#A29781] top-[5%] text-[80px] md:text-[200px] md:top-[10%] md:right-[31%]">
           Jewellery
         </p>
-        <p className="absolute flex items-center  font-poppins text-[#606060] text-2xl top-[45%] right-[45%]">
+        <p className="absolute flex items-center  font-poppins text-[#606060] md:text-2xl text-xl top-[45%] right-[30%] md:right-[45%]">
           Check it out <MdOutlineKeyboardArrowRight className="-mr-3" />{" "}
           <MdOutlineKeyboardArrowRight className="-mr-3" />{" "}
           <MdOutlineKeyboardArrowRight />
         </p>
       </div>
       <section className="mt-12">
-        <div className="flex-1 mr-0  flex-col flex justify-center">
+        <div className="flex flex-col justify-center flex-1 mr-0">
           <div className="flex justify-between items-center border-dashed border-b-2 py-2  pt-2.5 pl-5 border-customBlue">
-            <h2 className="text-2xl font-semibold font-poppins  text-center lg:text-left">
+            <h2 className="text-2xl font-semibold text-center font-poppins lg:text-left">
               More items
             </h2>
-            <p className="text-customBlue text-lg font-semibold">View All</p>
+            <p className="text-lg font-semibold text-customBlue">View All</p>
           </div>
-          <div className="grid grid-cols-2 lg:grid-cols-5 gap-6 my-8">
+          <div className="grid grid-cols-2 gap-6 my-8 md:grid-cols-4 2xl:grid-cols-5">
             {hotItemDeal.map((item) => (
               <ItemCard key={item.id} item={item} />
             ))}
@@ -232,15 +232,15 @@ function Deal() {
       </section>
 
       <section className="">
-        {/* <div className="flex-1 mr-0  flex-col flex justify-center"> */}
+        {/* <div className="flex flex-col justify-center flex-1 mr-0"> */}
         <div className="flex justify-between items-center border-dashed border-b-2 py-2  pt-2.5 pl-5 border-customBlue">
-          <h2 className="text-2xl font-semibold font-poppins  text-center lg:text-left">
+          <h2 className="text-2xl font-semibold text-center font-poppins lg:text-left">
             Review on product
           </h2>
-          <p className="text-customBlue text-lg font-semibold">View All</p>
+          <p className="text-lg font-semibold text-customBlue">View All</p>
         </div>
 
-        <div className="grid grid-cols-1  lg:grid-cols-2 gap-4 my-8">
+        <div className="grid grid-cols-1 gap-4 my-8 md:grid-cols-2">
           <ReviewCard />
           <ReviewCard />
         </div>
