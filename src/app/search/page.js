@@ -2,45 +2,59 @@
 import Image from "next/image";
 import ItemCard from "../components/Cards/ItemCard";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function SearchPage() {
   const [price, setPrice] = useState(70);
+  const [query, setQuery] = useState("");
+  const [items, setItems] = useState([]);
 
   const handlePriceChange = (event) => {
     setPrice(event.target.value);
   };
-  const items = [
-    {
-      id: 1,
-      title: "Inalsa Air Fryer Fry-Light-1400W",
-      price: "₹4,627.00/mo",
-      image: "/images/Rec.jpg",
-      available: true,
-    },
-    {
-      id: 2,
-      title: "Oneplus Bullets Z2 Bluetooth Wireless",
-      price: "₹1,699.00/mo",
-      image: "/images/Rec3.png",
-      available: true,
-    },
-    {
-      id: 3,
-      title: "New Fastrack Reflex Play| AMOLED Display",
-      price: "₹5,699.00/mo",
-      image: "/images/Rec4.png",
-      available: true,
-    },
+  useEffect(() => {
+    fetch(`/api/search?query=${query}`)
+      .then((res) => res.json())
+      .then((data) => setItems(data.results));
+  }, [query]);
 
-    {
-      id: 4,
-      title: "Samsung Galaxy Tab S8+ - Wifi Only, Graphite",
-      price: "₹74,998.00/mo",
-      image: "/images/Rec2.png",
-      available: true,
-    },
-  ];
+  useEffect(() => {
+    fetch(`/api/v1/search?q=jeans`)
+      .then((res) => res.json())
+      .then((data) => setItems(data.results));
+  })
+  
+  // const items = [
+  //   {
+  //     id: 1,
+  //     title: "Inalsa Air Fryer Fry-Light-1400W",
+  //     price: "₹4,627.00/mo",
+  //     image: "/images/Rec.jpg",
+  //     available: true,
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "Oneplus Bullets Z2 Bluetooth Wireless",
+  //     price: "₹1,699.00/mo",
+  //     image: "/images/Rec3.png",
+  //     available: true,
+  //   },
+  //   {
+  //     id: 3,
+  //     title: "New Fastrack Reflex Play| AMOLED Display",
+  //     price: "₹5,699.00/mo",
+  //     image: "/images/Rec4.png",
+  //     available: true,
+  //   },
+
+  //   {
+  //     id: 4,
+  //     title: "Samsung Galaxy Tab S8+ - Wifi Only, Graphite",
+  //     price: "₹74,998.00/mo",
+  //     image: "/images/Rec2.png",
+  //     available: true,
+  //   },
+  // ];
   return (
     <div className="font-poppins">
       <div className="w-full h-20 flex items-center bg-[#005D760D] my-12">

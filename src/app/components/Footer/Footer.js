@@ -10,6 +10,7 @@ import { GrLocation } from "react-icons/gr";
 import Link from "next/link";
 
 const Footer = () => {
+  
   return (
     <footer className="w-screen mt-8 text-left lg:w-full font-poppins">
       <div className="w-full bg-gray-100">
